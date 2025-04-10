@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            max-width: 100vw;
+        }
+        body{
+            background-color: rgb(2, 2, 44);
+        }
+        nav{
+            width: 100%;
+            height: 80px;
+            background-color: rgb(22, 22, 83);
+            
+        }
+        .navbar_inner{
+            width: 90%;
+            height: 100%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+            margin: auto;
+
+        }
+        .menu_bar{
+            width: 30px;
+            height: 30px;
+        }
+        .menu_bar img{
+            width: 25px;
+            height: 25px;
+        }
+        .nav_right{
+            width: 300px;
+            height: 100%;
+            font-size: 30px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            margin-left: 0px;
+        }
+        .nav_left{
+            width: 300px;
+            height: 100%;
+            display: block;
+            
+            
+        }
+        ul{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        li{
+            list-style-type: none;
+        }
+        .menu_bar{
+            display: none;
+        }
+        .menu_bar img{
+            display: none;
+        }
+
+        /* @media (max-width:678px) {
+            .menu_bar{
+            display: block;
+        }
+        .menu_bar img{
+            display: block;
+        }
+        .nav_left{
+            width: 83vw;
+            position:absolute;
+            margin-top: 380px;
+            z-index: -1;
+            height:300px;
+            transition: all 1.65s;
+        }
+        ul{
+            
+            padding: 25px;
+            width: 100%;
+            background-color: rgb(22, 22, 83);
+            position:relative;
+            gap: 20px;
+            display: flex;
+            flex-direction: column;
+            border-bottom-right-radius:30px;
+            border-bottom-left-radius:30px;
+        }
+
+
+        } */
+        
+    </style>
+
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_inner">
+            <div class="nav_right">
+                <p class="nav_head" >Engineering Adda</p>
+            </div>
+            <div class="nav_left" id="navBarTog">
+                <ul>
+                    <li>Home</li>
+                    <li>ESD</li>
+                    <li>VLSI</li>
+                    <li>DIP</li>
+                    <li>About</li>
+                    <li>Logout</li>
+                </ul>
+            </div>
+            <div class="menu_bar">
+                <img src="/Images/Menu Bar.png" alt="Error" id="menubar">
+            </div>
+        </div>
+    </nav>
+
+
+    <script>
+        let menu=document.getElementById("menubar");
+        let navBarTog =document.getElementById("navBarTog") ;
+        navBarTog.style.marginTop="-350px"
+        
+        menu.onclick = function(){
+            if (navBarTog.style.marginTop=="-350px"){
+                navBarTog.style.marginTop="380px";
+            } else {
+                navBarTog.style.marginTop="-350px";
+            }
+            
+        }
+    </script>
+</body>
+</html>
